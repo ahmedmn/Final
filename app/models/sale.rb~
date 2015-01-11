@@ -1,0 +1,8 @@
+class Sale < ActiveRecord::Base
+  attr_accessible :city, :date, :good, :price
+
+
+	def filter_by_city(city)
+		find(:all , :conditions => {:city => city })
+	end
+end

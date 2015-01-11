@@ -15,8 +15,10 @@ end
    good  = g[0]
    price = g[1]
    date = Date.parse(getRandom DATE)
-   puts "#{city}, #{good}, #{price}, #{date}"
+   #puts "#{city}, #{good}, #{price}, #{date}"
    #Add code here to save the record to the database.
-   
+  
+Sale.create(city: '#{city}' ,good:'#{good}', price: '#{price}' , date:'#{date}')
+
 end
 
